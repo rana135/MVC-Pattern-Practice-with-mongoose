@@ -62,13 +62,13 @@ module.exports.deleteReview = async(req,res)=>{
         const result = await ReviewModel.deleteOne({_id:id});
         res.status(200).json({
             status:"success",
-            message:"Single review get successfully",
+            message:"Single review delete successfully",
             data:result,
         })
     } catch(error){
         res.status(500).json({
             status:"fail",
-            message:"Single review get fail",
+            message:"Single review delete fail",
             err:error.message,
         })
         console.log(error);
